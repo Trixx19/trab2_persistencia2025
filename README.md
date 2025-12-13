@@ -14,6 +14,7 @@ erDiagram
         string descricao
         string data_adocao
         int animal_id FK
+        bool cancelamento
     }
     Adotante {
         int id PK
@@ -28,7 +29,7 @@ erDiagram
     }
 
     Animal ||--o{ InfoAdocao : "possui"
-    Animal ||--o{ Ani_Adot : "envolvido em"
-    Adotante ||--o{ Ani_Adot : "realiza"
+    Animal ||--o{ Ani_Adot : "relaciona"
+    Adotante ||--o{ Ani_Adot : "relaciona"
 
 ```
