@@ -28,7 +28,7 @@ erDiagram
         int adotante_id PK, FK
     }
     Animal ||--o{ Atendimento : "tem"
-    Animal }o--o{ Adocao : "tem"
-    Adotante }o--o{ Adocao : "tem"
+    Animal }o--o{ InfoAdocao : "tem"
+    Adotante }o--o{ InfoAdocao : "tem"
 
 ```
