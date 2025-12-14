@@ -5,7 +5,6 @@ from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .animal import Animal
     from .adotante import Adotante
-    from .adocao_atend import AdocaoAtend
     from .atendente import Atendente
 
 class AdocaoBase(SQLModel):
@@ -28,4 +27,5 @@ class AdocaoAtend(SQLModel, table=True):
     id_atendente: int = Field(foreign_key="atendente.id_atendente", primary_key=True)
 
     adocao: "Adocao" = Relationship(back_populates="atendentes")
-    atendente: "Atendente" = Relationship(back_populates="adocoes")
+    atendente: "Atendente" = Relationship(back_populates="adocao_links")
+
